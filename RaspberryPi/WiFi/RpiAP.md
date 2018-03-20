@@ -4,8 +4,6 @@ The Raspberry Pi can be used as a wireless access point, running a standalone ne
 
 Note that this documentation was tested on a Raspberry Pi 3 with Raspbian Stretch, and it is possible that some USB dongles may need slight changes to their settings. If you are having trouble with a USB wireless dongle, please check the forums.
 
-To add a Raspberry Pi-based access point to an existing network, see [this section](https://github.com/SurferTim/documentation/blob/6bc583965254fa292a470990c40b145f553f6b34/configuration/wireless/access-point.md#internet-sharing).
-
 In order to work as an access point, the Raspberry Pi will need to have access point software installed, along with DHCP server software to provide connecting devices with a network address. Ensure that your Raspberry Pi is using an up-to-date version of Raspbian (dated 2017 or later).
 
 Use the following to update your Raspbian installation:
@@ -30,7 +28,7 @@ sudo systemctl stop hostapd
 
 ### Configuring a static IP
 
-We are configuring a standalone network to act as a server, so the Raspberry Pi needs to have a static IP address assigned to the wireless port. This documentation assumes that we are using the standard 192.168.x.x IP addresses for our wireless network, so we will assign the server the IP address 192.168.0.1. It is also assumed that the wireless device being used is `wlan0`.
+We are configuring a standalone network to act as a server, so the Raspberry Pi needs to have a static IP address assigned to the wireless port. This documentation assumes that we are using the standard 192.168.x.x IP addresses for our wireless network, so we will assign the server the IP address 192.168.x.1. It is also assumed that the wireless device being used is `wlan0`.
 
 To configure the static IP address, edit the dhcpcd configuration file with:
 
